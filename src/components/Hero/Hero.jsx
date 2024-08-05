@@ -2,7 +2,7 @@ import React from "react";
 
 import styles from "./Hero.module.css";
 import { getImageUrl } from "../../utils";
-
+import AppAvatar from "../../Avatar/AppAvatar";
 export const Hero = () => {
   return (
     <section className={styles.container}>
@@ -12,18 +12,15 @@ export const Hero = () => {
           A Software Engineer student
         </p>
         <p className={styles.desc}>From concept to deployment, 
-          I specialize in weaving intricate digital solutions that not only perform flawlessly 
-          but also captivate and engage</p>
+          I specialize in weaving intricate<br/> digital solutions that not only perform flawlessly 
+          but also <br/>captivate and engage</p>
         
         <a href="mailto:chaima.saad.2202@email.com" className={styles.contactBtn}>
           Contact Me
         </a>
       </div>
-      <img
-        src={getImageUrl("hero/heroImage.png")}
-        alt="Hero image of me"
-        className={styles.heroImg}
-      />
+     
+    <AppAvatar/>
       <div className={styles.topBlur} />
       <div className={styles.bottomBlur} />
     </section>

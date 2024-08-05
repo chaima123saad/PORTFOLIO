@@ -1,0 +1,24 @@
+.App {
+  text-align: center;
+}
+
+
+.App-header {
+  background: linear-gradient(180deg, rgba(25,26,56,0.9500175070028011) 26%, rgba(72,76,153,1) 69%, rgba(79,84,185,1) 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+
+  font-size: calc(10px + 2vmin);
+  color: #ffffff;
+}
+
+
+
+
+.secLeft{
+  display:flex;
+  flex-direction: column;
+  justify-content: left;
+  margin-left: 8vw;
+}
