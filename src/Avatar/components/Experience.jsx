@@ -5,6 +5,7 @@ import { Desk } from "./Desk";
 import { Keyboard } from "./Portal_keyboard";
 import { Chaise } from './Chaise';
 import { BoxGeometry, MeshStandardMaterial, Mesh } from 'three';
+import { Carpet } from './Carpet';
 
 export const Experience = () => {
   // Create a reference for the cube
@@ -25,8 +26,9 @@ export const Experience = () => {
       <group>
         <Avatar />
         <Keyboard/>
-<Chaise/>
+        <Chaise/>
         <Desk/>
+        <Carpet/>
       </group>
     </>
   );
