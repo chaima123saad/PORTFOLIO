@@ -15,7 +15,7 @@ export function Avatar(props) {
 
   
   return (
-    <group {...props} ref={group} dispose={null} scale={[1.2, 1.4, 1.2]} position={[2.3, -0.91, 0.1]}>
+    <group {...props} ref={group} dispose={null} scale={[0.9, 1.415, 1.5]} position={[2, -0.91, 0.1]}>
       <group rotation-x={-Math.PI / 1.7} rotation-z={-Math.PI / 3}  rotation-y={-Math.PI / 30} >
       <primitive object={nodes.Hips} />
       <skinnedMesh

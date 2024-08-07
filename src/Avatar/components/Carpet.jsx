@@ -10,7 +10,7 @@ export function Carpet(props) {
   const { nodes, materials } = useGLTF('models/carpet.glb')
   return (
     <group {...props} dispose={null}>
-      <group scale={0.01}  position={[1, -1.45, 0]}  rotation-x={-Math.PI / -2.5} rotation-z={-Math.PI / 1.6} >
+      <group scale={0.012}  position={[1, -1.5, 0]}  rotation-x={-Math.PI / -2.5} rotation-z={-Math.PI / 1.6} >
         <mesh geometry={nodes.Object_16.geometry} material={materials['982665']} />
         <mesh geometry={nodes.Object_17.geometry} material={materials.material} />
       </group>
