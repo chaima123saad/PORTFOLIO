@@ -4,34 +4,28 @@ import { Avatar } from "./Avatar";
 import { Desk } from "./Desk";
 import { Keyboard } from "./Portal_keyboard";
 import { Chaise } from './Chaise';
-import { BoxGeometry, MeshStandardMaterial, Mesh } from 'three';
 import { Carpet } from './Carpet';
 import { Computer } from './Computer';
 
-export const Experience = () => {
-  // Create a reference for the cube
-  const cubeRef = useRef();
-
-
-
-  // Create a cube geometry and material
-  const cubeGeometry = new BoxGeometry(0.7, 0.7, 0.7);
-  const cubeMaterial = new MeshStandardMaterial({ color: 0x4682B4 });
-  const cube = new Mesh(cubeGeometry, cubeMaterial);
-  cube.castShadow = true;
-  cube.receiveShadow = true;
+export const Experience = (props) => {
+  const { section } = props;
 
   return (
     <>
+      {/* Set the environment to sunset */}
       <Environment preset="sunset" />
+
+      {/* Group of 3D objects */}
       <group>
+        {/* Avatar animation based on the 'section' prop */}
         <Avatar />
         
-        <Chaise/>
-        <Desk/>
-        <Carpet/>
-        <Keyboard/>
-        <Computer/>
+        {/* Other scene elements */}
+        <Chaise />
+        <Desk />
+        <Carpet />
+        <Keyboard />
+        <Computer />
       </group>
     </>
   );
