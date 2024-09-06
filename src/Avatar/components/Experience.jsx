@@ -6,6 +6,7 @@ import { Keyboard } from "./Portal_keyboard";
 import { Chaise } from './Chaise';
 import { Carpet } from './Carpet';
 import { Computer } from './Computer';
+import { Robot } from './Robot_playground';
 
 export const Experience = (props) => {
   const { section } = props;

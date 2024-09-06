@@ -1,15 +1,11 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { useAnimations, useGLTF, useFBX } from '@react-three/drei';
-import * as THREE from 'three';
 
 export function Avatar(props) {
   const group = useRef();
   const { nodes, materials } = useGLTF("models/6655b059dd37bca36d7b1695.glb");
 
   const typingFBX = useFBX("animations/Typing.fbx");
-  const standingFBX = useFBX("animations/Standing.fbx");
-  const fallingFBX = useFBX("animations/Falling.fbx");
-
   const animations = [];
 
   if (typingFBX?.animations?.[0]) {
@@ -17,61 +13,44 @@ export function Avatar(props) {
     animations.push(typingFBX.animations[0]);
   }
 
-  if (standingFBX?.animations?.[0]) {
-    standingFBX.animations[0].name = "Standing";
-    animations.push(standingFBX.animations[0]);
-  }
-
-  if (fallingFBX?.animations?.[0]) {
-    fallingFBX.animations[0].name = "Falling";
-    animations.push(fallingFBX.animations[0]);
-  }
-
   const { actions } = useAnimations(animations, group);
-
+  const [isVisible, setIsVisible] = useState(true);
   const [currentAnimation, setCurrentAnimation] = useState("Typing");
-  const [hasFallen, setHasFallen] = useState(false); // Flag to track if Falling animation has played
 
- 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollY = window.scrollY;
-
-      if (scrollY > 100 ) {
-        setCurrentAnimation("Falling");
+      const scrollPosition = window.scrollY;
+      
+      // Set visibility based on scroll position
+      if (scrollPosition > 100) {
+        setIsVisible(false);
       } else {
-        setCurrentAnimation("Typing");
+        setIsVisible(true);
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
   useEffect(() => {
     if (actions[currentAnimation]) {
-      if (currentAnimation === "Falling") {
-        actions[currentAnimation].reset();
-        actions[currentAnimation].setLoop(THREE.LoopOnce);
-        actions[currentAnimation].clampWhenFinished = true;  // Set clampWhenFinished as a property
-        actions[currentAnimation].play();  // Ensure Falling plays only once
-      } else {
-        actions[currentAnimation].reset().fadeIn(0).play();
-      }
+      actions[currentAnimation].reset().play();
     }
-
-    return () => {
-      if (actions[currentAnimation]) {
-        actions[currentAnimation].fadeOut(0.5);
-      }
-    };
   }, [currentAnimation, actions]);
 
-  
   return (
-    <group {...props} ref={group} dispose={null} scale={[0.9, 1.415, 1.5]} position={[2, -0.91, 0.1]}>
+    <group 
+      {...props} 
+      ref={group} 
+      dispose={null} 
+      scale={[0.9, 1.415, 1.5]} 
+      position={[2, -0.91, 0.1]} 
+      visible={isVisible} // Toggle visibility
+    >
       <group rotation-x={-Math.PI / 1.7} rotation-z={-Math.PI / 3} rotation-y={-Math.PI / 30}>
         <primitive object={nodes.Hips} />
         <skinnedMesh
