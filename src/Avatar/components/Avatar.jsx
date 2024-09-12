@@ -16,7 +16,27 @@ export function Avatar(props) {
   const { actions } = useAnimations(animations, group);
   const [isVisible, setIsVisible] = useState(true);
   const [currentAnimation, setCurrentAnimation] = useState("Typing");
+  useEffect(() => {
+    const handleResize = () => {
+      // Check if the screen width is less than 900px
+      if (window.innerWidth < 900) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+    };
 
+    // Call the function initially to set the visibility based on the initial screen size
+    handleResize();
+
+    // Add event listener to handle screen resizing
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+  
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
