@@ -27,7 +27,7 @@ export function Keyboard(props) {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      if (scrollY > 100) { // Adjust this threshold as needed
+      if (scrollY > 100 || window.innerWidth < 900) { // Adjust this threshold as needed
         setVisible(false);
       } else {
         setVisible(true);

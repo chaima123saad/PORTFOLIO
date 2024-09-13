@@ -36,6 +36,7 @@
 .description {
   font-size: 30px;
   font-family: var(--font-roboto);
+  color: #FFFF80;
   margin-bottom: 10px;
 }
 
@@ -51,9 +52,9 @@
   background-color: var(--color-primary);
   color: var(--color-text);
   border-radius: 100px;
-  font-size: 30px;
-  font-weight: 600;
-  padding: 17px 26px;
+  font-size: 25px;
+  font-weight: 500;
+  padding: 10px 40px;
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
 }
 

@@ -42,7 +42,7 @@ export function Avatar(props) {
       const scrollPosition = window.scrollY;
       
       // Set visibility based on scroll position
-      if (scrollPosition > 100) {
+      if (scrollPosition > 80 || window.innerWidth < 900) {
         setIsVisible(false);
       } else {
         setIsVisible(true);

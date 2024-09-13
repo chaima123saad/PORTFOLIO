@@ -2,8 +2,8 @@
 
 .container {
   color: var(--color-text);
-  margin-top: 120px;
-  background-color: var(--color-secondary);
+  margin-top: 150px;
+  background-color: #04062b52;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -41,7 +41,7 @@
 .link a {
   color: var(--color-text);
   text-decoration: none;
-  font-size: 20px;
+  font-size: 1.5vw;
   font-weight: 400;
   letter-spacing: 1.5px;
 }
@@ -62,3 +62,4 @@
     align-items: center;
   }
 }
+

@@ -1,10 +1,10 @@
 :root {
   /* Colours */
   --color-text: #ffffff;
-  --color-primary: #ffbd00;
+  --color-primary: #FFB22C;
   --color-secondary: #08303394;
-  --color-dark: #6a4c93;
-  --color-bg: #390099;
+  --color-dark: #1230AE;
+  --color-bg: #6439FF;
 
   /* Fonts */
   --font-roboto: "Roboto";

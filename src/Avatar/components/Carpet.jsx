@@ -35,7 +35,7 @@ export function Carpet(props) {
       const scrollY = window.scrollY;
 
       // Update visibility based on scroll position
-      if (scrollY > 100) { // Adjust this value to control when the carpet disappears
+      if (scrollY > 100 || window.innerWidth < 900) { // Adjust this value to control when the carpet disappears
         setIsVisible(false);
       } else {
         setIsVisible(true);

@@ -29,7 +29,7 @@ export function Desk(props) {
       const scrollPosition = window.scrollY;
       
       // You can adjust the scroll threshold to control when the desk disappears
-      if (scrollPosition > 100) {
+      if (scrollPosition > 100 || window.innerWidth < 900) {
         setIsVisible(false);
       } else {
         setIsVisible(true);

@@ -35,5 +35,17 @@
   {
     "title": "MySQL",
     "imageSrc": "skills/mysql_PNG23.png"
+  },
+  {
+    "title": "Python",
+    "imageSrc": "skills/py.png"
+  },
+  {
+    "title": "C",
+    "imageSrc": "skills/c.png"
+  },  {
+    "title": "C++",
+    "imageSrc": "skills/c++.png"
   }
+ 
 ]

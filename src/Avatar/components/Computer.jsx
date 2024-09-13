@@ -12,7 +12,7 @@ export function Computer(props) {
   useEffect(() => {
     const handleResize = () => {
       // Check if the screen width is less than 900px
-      if (window.innerWidth < 900) {
+      if (window.innerWidth < 900 ) {
         setVisible(false);
       } else {
         setVisible(true);
@@ -32,7 +32,7 @@ export function Computer(props) {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      if (scrollY > 100) { // Adjust this threshold as needed
+      if (scrollY > 100 || window.innerWidth < 900) { // Adjust this threshold as needed
         setVisible(false);
       } else {
         setVisible(true);
