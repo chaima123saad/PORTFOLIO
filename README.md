@@ -1,2 +1,2 @@
 Welcome to my portfolio 
-![potfolio capt](https://github.com/user-attachments/assets/dfbf9478-6edd-496c-b332-24243bcc904d)
+![port](https://github.com/user-attachments/assets/fa4997c5-f124-41c3-bd92-118a77854dc3)
