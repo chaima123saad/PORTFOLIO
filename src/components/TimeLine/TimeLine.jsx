@@ -9,17 +9,17 @@ import styles from "./TimeLine.module.css";
 
 const Timeline = () => {
   return (
-    <div className={styles.divc}>
+    <div className={styles.divc} id="timeline">
       <h2 className={styles.title}>Education</h2>
       <VerticalTimeline>
 
         {/* Present - Current Master's Study */}
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
-          contentStyle={{ background: '#f94144', color: '#fff' }}
+          contentStyle={{ background: '#FF5580', color: '#fff' }}
           contentArrowStyle={{ borderRight: '7px solid  #f94144' }}
           date="Present"
-          iconStyle={{ background: '#f94144', color: '#fff' }}
+          iconStyle={{ background: '#FF5580', color: '#fff' }}
           icon={<FaLaptopCode />}
         >
           <h3 className="vertical-timeline-element-title">
