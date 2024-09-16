@@ -1,5 +1,12 @@
 [
   {
+    "title": "Web application to manage and organize tasks with ChatGPT API",
+    "imageSrc": "projects/capt2.PNG",
+    "description": " Manage your work, deadlines, and team, all in one web application. Set and track schedules, validate tasks, and keep your project under control.",
+    "skills": ["ReactJS","NodeJS","MongoDB","Soket.io"]
+ 
+  },
+  {
     "title": "Personnel-Management-System",
     "imageSrc": "projects/p1.png",
     "description": "Java as the primary programming language , JavaFX for graphical user interface development and MySQL for the database",
@@ -11,40 +18,29 @@
     "title": "Pacman Game",
     "imageSrc": "projects/pacman.png",
     "description": "This is a project made to learn the latest languages by building an app.",
-    "skills": ["Java"],
-    "demo": "https://www.example.com",
-    "source": "https://www.github.com"
+    "skills": ["Java"]
+   
   },
   {
     "title": "Weather-App",
     "imageSrc": "projects/WEATHER.png",
     "description": "A simple weather app built with Flutter that leverages the OpenWeather API to provide real-time weather information for cities around the world.",
-    "skills": ["Flutter","OpenWeather API "],
-    "demo": "https://www.example.com",
-    "source": "https://www.github.com"
+    "skills": ["Flutter","OpenWeather API "]
+  
   },
   {
     "title": "My-Work-Timer-App",
     "imageSrc": "projects/time.png",
     "description": "A simple weather app built with Flutter that leverages the OpenWeather API to provide real-time weather information for cities around the world.",
-    "skills": ["Flutter"],
-    "demo": "https://www.example.com",
-    "source": "https://www.github.com"
+    "skills": ["Flutter"]
+ 
   },
-  {
-    "title": "Web application to manage and organize tasks with ChatGPT API",
-    "imageSrc": "projects/time.png",
-    "description": "A simple weather app built with Flutter that levera simple weather app built with Flutter that levera ges the OpenWeather API to provide real-time weather information for cities around the world.",
-    "skills": ["Flutter"],
-    "demo": "https://www.example.com",
-    "source": "https://www.github.com"
-  },
+  
   {
     "title": "3D-Avatar-with-Animation",
     "imageSrc": "projects/avatar.PNG",
     "description": "A simple weather app built with Flutter that leverages the OpenWeather API to provide real-time weather information for cities around the world.",
-    "skills": ["ThreeJS"],
-    "demo": "https://www.example.com",
-    "source": "https://www.github.com"
+    "skills": ["ThreeJS"]
+   
   }
 ]
